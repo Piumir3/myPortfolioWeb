@@ -46,10 +46,10 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Piumi Rathnayake",
           from_email: form.email,
-          to_email: "piumir52@gmail.com",
+          to_email: "piumirathnayake200@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -67,7 +67,7 @@ const Contact = () => {
           console.error(error);
 
           alert("Ahh, something went wrong. Please try again.");
-        }
+        },
       );
   };
 
