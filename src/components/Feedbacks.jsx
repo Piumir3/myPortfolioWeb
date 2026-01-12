@@ -8,19 +8,24 @@ import { fadeIn, textVariant } from "../utils/motion";
 const BlogCard = ({ index, title, url, thumbnail }) => (
   <motion.div
     variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    className="bg-black-200 p-5 rounded-2xl xs:w-[320px] w-full hover:shadow-lg transition-all duration-300"
+    className="bg-[#0f0c29]/50 backdrop-blur-md p-5 rounded-2xl xs:w-[320px] w-full border border-white/10 hover:border-accent-cyan/50 transition-colors"
   >
-    <img
-      src={thumbnail}
-      alt={title}
-      className="w-full h-40 object-cover rounded-lg mb-4"
-    />
-    <h3 className="text-white text-[18px] font-semibold">{title}</h3>
+    <div className="relative w-full h-40 mb-4 overflow-hidden rounded-lg">
+      <img
+        src={thumbnail}
+        alt={title}
+        className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+      />
+    </div>
+
+    <h3 className="text-white text-[18px] font-semibold leading-[24px] min-h-[48px]">
+      {title}
+    </h3>
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="mt-3 inline-block text-sm text-secondary hover:underline"
+      className="mt-4 inline-block text-sm text-accent-cyan hover:text-white transition-colors font-medium border-b border-accent-cyan/30 hover:border-white pb-1"
     >
       Read Full Post →
     </a>
@@ -29,9 +34,11 @@ const BlogCard = ({ index, title, url, thumbnail }) => (
 
 const Feedbacks = () => {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+    <div
+      className={`mt-12 bg-black-100/30 rounded-[20px] glass-panel border-none`}
+    >
       <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+        className={`bg-tertiary/40 rounded-t-2xl ${styles.padding} min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Latest from Medium</p>

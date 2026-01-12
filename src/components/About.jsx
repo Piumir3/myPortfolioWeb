@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Tilt from "react-tilt";
 
+import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -9,7 +10,7 @@ const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      className="w-full p-[1px] rounded-[20px] shadow-card bg-gradient-to-br from-[#00f2ea] to-[#bd00ff]"
     >
       <div
         options={{
@@ -17,7 +18,7 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+        className="bg-[#030014]/90 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col backdrop-blur-sm"
       >
         <img
           src={icon}
@@ -45,18 +46,19 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I’m a skilled software developer with expertise in TypeScript and
-        JavaScript, proficient in frameworks like React and Angular. I’m a quick
-        learner who collaborates closely with clients to build efficient,
-        scalable, and user-friendly solutions that address real-world
-        challenges. Let’s work together to bring your ideas to life!
+        I’m a Frontend Developer specializing in building responsive,
+        high-performance web applications using TypeScript and JavaScript. I
+        focus on creating clean UI/UX designs with strong data binding and
+        interactive components that deliver smooth, user-friendly experiences. I
+        enjoy transforming complex ideas into elegant, scalable, and easy-to-use
+        interfaces.
       </motion.p>
 
-      {/* <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div> */}
+      </div>
     </>
   );
 };
