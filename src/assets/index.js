@@ -23,6 +23,7 @@ import logo from "./logo.svg";
 import menu from "./menu.svg";
 import mobile from "./mobile.png";
 import pdc from "./pdc.png";
+import angular from "./tech/angular.png";
 import bootstrap from "./tech/bootstrap.png";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -41,6 +42,7 @@ import tripguide from "./tripguide.png";
 import web from "./web.png";
 
 export {
+  angular,
   API,
   atomicDesign,
   backend,

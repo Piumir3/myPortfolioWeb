@@ -11,6 +11,7 @@ import {
   git,
   html,
   javascript,
+  angular,
   lms,
   mobile,
   pdc,
@@ -75,6 +76,10 @@ const technologies = [
   {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Angular",
+    icon: angular,
   },
   {
     name: "Tailwind CSS",
